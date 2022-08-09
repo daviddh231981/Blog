@@ -17,3 +17,37 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+//Dropdown Menu
+function showTrip() {
+  
+  const divShowTrip = document.getElementById("tripDIV");
+  const btnShowTrip = document.getElementById("showTripButton");
+
+  if (divShowTrip.style.display === "none") {
+    divShowTrip.style.display = "block";
+    btnShowTrip.textContent = "Hide Other Reports";
+  } else {
+    divShowTrip.style.display = "none";
+    btnShowTrip.textContent = "More from this Trip";
+  }
+
+}
+
+//load lower resolution images
+(() => {
+  'use strict';
+  // Page is loaded
+  const objects = document.getElementsByClassName('img');  Array.from(objects).map((item) => {
+    // Start loading image
+    const img = new Image();
+    img.src = item.dataset.src;
+    // Once image is loaded replace the src of the HTML element
+    img.onload = () => {
+      item.classList.remove('asyncImage');
+      return item.nodeName === 'IMG' ? 
+        item.src = item.dataset.src :        
+        item.style.backgroundImage = `url(${item.dataset.src})`;
+    };
+  });
+})();

@@ -37,13 +37,12 @@ nav ul {
 nav li {
   display: inline-block;
   width: 100px;
-  height: 30px;
   font-size: 110%;
   text-align: center;
   background-color: #095D8F;
   border: 3px solid #E07C01; 
   margin: 1%;
-  padding: 0;
+  padding: 15px;
 }
 
 nav a {
@@ -95,7 +94,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 h2 { 
   font-family: Tahoma, Verdana, Segoe, sans-serif; 
@@ -156,3 +154,38 @@ p {
   background-color: #E07C01; /* Background on hover */
 }
 
+/*Dropdown menu for trip*/
+#tripDIV {
+  background-color: #553711;
+  font-family: Tahoma, Verdana, Segoe, sans-serif; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700; 
+  line-height: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 5px;
+}
+
+#showTripButton {
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #553711; /* Set a background color */
+  color: #FFF; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  font-size: 18px; /* Increase font size */
+  width: 100%;
+}
+
+#showTripButton:hover {
+  background-color: #E07C01; /* Background on hover */
+}
+
+#tripDIV {
+  display: none;
+  background-color: #095D8F;
+}
